@@ -4,18 +4,18 @@ import json
 class HTTPError(Exception):
     """ Base of all other errors"""
 
-    def __init__(self, error):
-        self.status_code = error.code
-        self.reason = error.reason
-        self.body = error.read()
-        self.headers = error.hdrs
+    def __init__(self, code, reason=None, body='', headers=None):
+        self.status_code = code
+        self.reason = reason
+        self.body = body
+        self.headers = headers or {}
 
     @property
     def to_dict(self):
         """
         :return: dict of response error from the API
         """
-        return json.loads(self.body.decode('utf-8'))
+        return json.loads(self.body)
 
 
 class BadRequestsError(HTTPError):
@@ -79,7 +79,7 @@ err_dict = {
 
 def handle_error(error):
     try:
-        exc = err_dict[error.code](error)
+        exc = err_dict[error.status_code](error)
     except KeyError:
         return HTTPError(error)
     return exc

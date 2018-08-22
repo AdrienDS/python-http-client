@@ -1,3 +1,5 @@
+Fork of the sendgrid's python-http-client using treq (twisted)
+
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
 [![BuildStatus](https://travis-ci.org/sendgrid/python-http-client.svg?branch=master)](https://travis-ci.org/sendgrid/python-http-client)
