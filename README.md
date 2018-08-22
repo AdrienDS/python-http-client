@@ -1,4 +1,4 @@
-Fork of the sendgrid's python-http-client using treq (twisted)
+Fork of sendgrid python-http-client using treq (twisted)
 
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
@@ -94,7 +94,7 @@ print response.body
 <a name="usage"></a>
 # Usage
 
-- [Example Code](https://github.com/sendgrid/python-http-client/tree/master/examples)
+- [Example Code](https://github.com/AdrienDS/tx_sendgrid_http_client/tree/master/examples)
 
 <a name="roadmap"></a>
 # Roadmap
@@ -143,6 +143,7 @@ We were inspired by the work done on [birdy](https://github.com/inueni/birdy) an
 
 <a name="about"></a>
 # About
+tx_sendgrid_http_client is maintained by [Adrien David](mailto:adrien@deeploop.com).
 
 python-http-client is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
