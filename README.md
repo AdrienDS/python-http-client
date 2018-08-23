@@ -33,18 +33,18 @@ If you are looking for the SendGrid API client library, please see [this repo](h
 
 ## Prerequisites
 
-- Python version 2.6, 2.7, 3.4, 3.5 or 3.6
+- Python version 3.6
 
 ## Install Package
 
 ```bash
-pip install python_http_client
+pip install tx-sendgrid-http-client
 ```
 
 or
 
 ```bash
-easy_install python_http_client
+easy_install tx-sendgrid-http-client
 ```
 
 ## API Key
