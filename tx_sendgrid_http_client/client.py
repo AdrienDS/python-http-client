@@ -47,7 +47,7 @@ class Response(object):
         :return: dict of response from the API
         """
         if self.body:
-            return json.loads(self.body.decode('utf-8'))
+            return json.loads(self.body)
         else:
             return None
 
