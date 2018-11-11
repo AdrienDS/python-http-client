@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the SendGrid open source projects. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
+Hello! Thank you for choosing to help contribute to one of the SendGrid open source projects. There are many ways you can contribute and help is always welcome. We simply ask that you follow the following contribution policies.
 
 - [CLAs and CCLAs](#cla)
 - [Roadmap & Milestones](#roadmap)
@@ -47,7 +47,7 @@ A software bug is a demonstrable issue in the code base. In order for us to diag
 
 Before you decide to create a new issue, please try the following:
 
-1. Check the Github issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
+1. Check the GitHub issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
 2. Update to the latest version of this code and check if issue has already been fixed
 3. Copy and fill in the Bug Report Template we have provided below
 
@@ -60,13 +60,15 @@ In order to make the process easier, we've included a [sample bug report templat
 
 We welcome direct contributions to the python-http-client code base. Thank you!
 
+Please note that we utilize the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for Git to help keep project development organized and consistent.
+
 ### Development Environment ###
 
 #### Install and Run Locally ####
 
 ##### Prerequisites #####
 
-- Python 2.6 through 3.6
+- Python 2.7 and 3.4+
 - There are no external dependencies
 
 ##### Initial setup: #####
@@ -112,14 +114,6 @@ All test files are in the [`tests`](https://github.com/sendgrid/python-http-clie
 
 For the purposes of contributing to this repo, please update the [`test_unit.py`](https://github.com/sendgrid/python-http-client/blob/master/test/test_unit.py) file with unit tests as you modify the code.
 
-For Python 2.6.*:
-
-```bash
-unit2 discover -v
-```
-
-For Python 2.7.* and up:
-
 ```bash
 python -m unittest discover -v
 ```
@@ -141,13 +135,12 @@ The above local "Initial setup" is complete
 Add `eval "$(pyenv init -)"` to your shell environment (.profile, .bashrc, etc) after installing tox, you only need to do this once.
 
 ```bash
-pyenv install 2.6.9
 pyenv install 2.7.11
 pyenv install 3.4.3
 pyenv install 3.5.2
 pyenv install 3.6.0
 python setup.py install
-pyenv local 3.6.0 3.5.2 3.4.3 2.7.8 2.6.9
+pyenv local 3.6.0 3.5.2 3.4.3 2.7.8
 pyenv rehash
 ```
 
@@ -193,10 +186,11 @@ Please run your code through:
    git pull upstream <dev-branch>
    ```
 
-3. Create a new topic branch (off the main project development branch) to
+3. Create a new topic branch off the `development` branch to
    contain your feature, change, or fix:
 
    ```bash
+   git checkout development
    git checkout -b <topic-branch-name>
    ```
 
@@ -210,10 +204,10 @@ Please run your code through:
 
 4b. Create or update the example code that demonstrates the functionality of this change to the code.
 
-5. Locally merge (or rebase) the upstream development branch into your topic branch:
+5. Locally merge (or rebase) the upstream `development` branch into your topic branch:
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream development
    ```
 
 6. Push your topic branch up to your fork:
@@ -223,10 +217,10 @@ Please run your code through:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch. All tests must be passing before we will review the PR.
+    with a clear title and description against the `development` branch. All tests must be passing before we will review the PR.
 
 If you have any additional questions, please feel free to [email](mailto:dx@sendgrid.com) us or create an issue in this repo.
 
 <a name="code-reviews"></a>
 ## Code Reviews
-If you can, please look at open PRs and review them. Give feedback and help us merge these PRs much faster! If you don't know how, Github has some great [information on how to review a Pull Request](https://help.github.com/articles/about-pull-request-reviews/).
+If you can, please look at open PRs and review them. Give feedback and help us merge these PRs much faster! If you don't know how, GitHub has some great [information on how to review a Pull Request](https://help.github.com/articles/about-pull-request-reviews/).

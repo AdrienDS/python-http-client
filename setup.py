@@ -1,4 +1,6 @@
+import io
 import os
+from distutils.file_util import copy_file
 from setuptools import setup
 
 
@@ -7,7 +9,14 @@ if os.path.exists('README.txt'):
     long_description = open('README.txt').read()
 
 base_url = 'https://github.com/AdrienDS/'
-version = '0.1.0'
+version = '0.1.1'
+
+dir_path = os.path.abspath(os.path.dirname(__file__))
+readme = io.open(os.path.join(dir_path, 'README.rst'), encoding='utf-8').read()
+
+copy_file(os.path.join(dir_path, 'VERSION.txt'),
+          os.path.join(dir_path, 'python_http_client', 'VERSION.txt'),
+          verbose=0)
 setup(
     name='tx_sendgrid_http_client',
     version=version,
@@ -20,12 +29,15 @@ setup(
     description='Sendgrid HTTP REST client for Twisted/Python',
     long_description=long_description,
     install_requires=['Twisted', 'treq'],
+    include_package_data=True,
     keywords=[
         'Sendgrid',
         'Twisted',
         'HTTP',
         'API'],
+    python_requires='>=3.6',
     classifiers=[
-        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ]
 )
