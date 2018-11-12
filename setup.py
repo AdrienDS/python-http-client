@@ -9,13 +9,13 @@ if os.path.exists('README.txt'):
     long_description = open('README.txt').read()
 
 base_url = 'https://github.com/AdrienDS/'
-version = '0.1.1'
+version = '0.1.2'
 
 dir_path = os.path.abspath(os.path.dirname(__file__))
 readme = io.open(os.path.join(dir_path, 'README.rst'), encoding='utf-8').read()
 
 copy_file(os.path.join(dir_path, 'VERSION.txt'),
-          os.path.join(dir_path, 'python_http_client', 'VERSION.txt'),
+          os.path.join(dir_path, 'tx_sendgrid_http_client', 'VERSION.txt'),
           verbose=0)
 setup(
     name='tx_sendgrid_http_client',

@@ -69,3 +69,4 @@ cleanup.sh
 .idea
 README.txt
 python_http_client/VERSION.txt
+tx_sendgrid_http_client/VERSION.txt
